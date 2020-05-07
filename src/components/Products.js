@@ -9,8 +9,6 @@ import Pagination from "react-js-pagination";
 import { Col } from "react-bootstrap";
 
 class Products extends Component {
-  _isMounted = false;
-
   constructor() {
     super();
     this.state = {
@@ -21,21 +19,25 @@ class Products extends Component {
     };
   }
 
+  // Llamo al método que trae los datos de la tabla
   componentDidMount() {
     this.refreshTable();
   }
 
+  // Método que refresca los datos en la tabla
   refreshTable() {
     this.getNumberOfInstrumentos();
     this.getAllInstrumentos();
   }
 
+  // Método que cambia la página activa
   handlePageChange(pageNumber) {
     this.setState({ activePage: pageNumber }, () => {
       this.refreshTable();
     });
   }
 
+  // Obtengo la cantidad de elementos que hay en la base de datos
   getNumberOfInstrumentos() {
     DataService.getNumberOfItems()
       .then((response) => {
@@ -48,6 +50,7 @@ class Products extends Component {
       });
   }
 
+  // Método que obtiene los instrumentos por página
   getAllInstrumentos() {
     DataService.getAll(this.state.activePage, this.state.rangoPaginas)
       .then((response) => {

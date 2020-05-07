@@ -15,15 +15,12 @@ class Details extends Component {
     };
   }
 
+  // Obtengo el instrumento según el id de la ruta
   componentDidMount() {
-    this._isMounted = true;
     this.getInstrumento(this.props.match.params.id);
   }
 
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
+  // Método que hace la llamada GET al servidor
   getInstrumento(id) {
     DataService.getOne(id)
       .then((response) => {
