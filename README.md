@@ -1,3 +1,19 @@
+# Configuración del proyecto
+
+## Backend Repository:
+
+[https://github.com/Florsalcedowd/tp5lab4back](https://github.com/Florsalcedowd/tp5lab4back)
+
+## Base de datos:
+
+Crear base de datos "instrumentosDB" e importar [instrumentosDB.sql](https://github.com/Florsalcedowd/tp5lab4front/blob/master/instrumentosDB.sql)
+
+## Run:
+
+Instalar node modules: npm install
+
+## `npm install`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
