@@ -6,7 +6,6 @@ import Products from "./components/Products";
 import Details from "./components/Details";
 import DondeEstamos from "./components/DondeEstamos";
 import Gestor from "./components/Gestor";
-import Formulario from "./components/Formulario";
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
       <Route path="/productos" component={Products}></Route>
       <Route path="/details/:id" component={Details}></Route>
       <Route path="/gestor" component={Gestor}></Route>
-      <Route path="/formulario" component={Formulario}></Route>
     </Switch>
   );
 }
